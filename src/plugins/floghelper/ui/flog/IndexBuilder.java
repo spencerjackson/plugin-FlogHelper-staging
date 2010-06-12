@@ -180,7 +180,7 @@ public class IndexBuilder {
 			filterInput = input.getInputStream();
 			filterOutput = output.getOutputStream();
 			ContentFilter.filter(filterInput, filterOutput,
-					"text/html", new URI("http://whocares.co:12345/"), nullFC, null, null);
+					"text/html", input.size(), new URI("http://whocares.co:12345/"), nullFC, null, null);
 			filterInput.close();
 			filterOutput.close();
 			input.free();
